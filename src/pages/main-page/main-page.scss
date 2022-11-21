@@ -1,0 +1,61 @@
+// Breakpoints
+$bp-tablet: 48em;
+$bp-desktop: 75em;
+
+
+.container {
+  height: 100%;
+  margin: 5% 3%;
+  padding: 5% 3%;
+  background-color: rgba($color: #fff, $alpha: 0.2);
+
+  @media (min-width: $bp-tablet) {
+    margin: 2%;
+    padding: 2%;
+   }
+
+  @media (min-width: $bp-desktop) {
+    margin: 2em auto;
+    padding: 2em;
+    max-width: $bp-desktop;
+
+  }
+
+
+}
+
+.routine-cards-container {
+  display: flex;
+  flex-direction: column;}
+
+.routine-card-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  & > p + p {
+    padding-left: 2rem;
+  }
+}
+
+.welcome-card-content {
+  height: 50vh;
+  width: 75vw;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  & > b {
+
+    font-size: 3rem;
+  }
+}
+
+.routine-name {
+  font-size: 1.2rem;
+}
+
+.card + .card {
+  margin-top: 1rem;
+}
